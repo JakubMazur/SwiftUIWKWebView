@@ -1,6 +1,6 @@
 //
 //  WebViewViewModel.swift
-//  SwiftUIWebView
+//  SwiftUIWKWebView
 //
 //  Created by Jakub Mazur on 27/06/2021.
 //

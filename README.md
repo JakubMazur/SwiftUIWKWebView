@@ -1,4 +1,4 @@
-# SwiftUIWebView
+# SwiftUIWKWebView
 
 `WKWebView` as  `NSViewRepresentable` for usage in macOS environment and `UIViewRepresentable` for `UIKit`
 
@@ -11,7 +11,7 @@ Loading a website inside a frame, navigation is possible inside a webpage, but t
 ```swift
 struct MyWebView: View {
     var body: some View {
-        SwiftUIWebView(viewModel: .init(urlString: "https://apple.com")!)
+        SwiftUIWKWebView(viewModel: .init(urlString: "https://apple.com")!)
     }
 }
 ```
@@ -26,7 +26,7 @@ struct MyWebView: View {
     @ObservedObject var viewModel: WebViewModel
 	
     var body: some View {
-        SwiftUIWebView(viewModel: viewModel)
+        SwiftUIWKWebView(viewModel: viewModel)
     }
 }
 
