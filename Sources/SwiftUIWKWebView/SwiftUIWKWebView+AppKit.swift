@@ -1,6 +1,6 @@
 //
 //  WKWebView_AppKit.swift
-//  SwiftUIWebView
+//  SwiftUIWKWebView
 //
 //  Created by Jakub Mazur on 27/06/2021.
 //
@@ -11,7 +11,7 @@ import WebKit
 #if canImport(AppKit)
 import AppKit
 
-public struct SwiftUIWebView : NSViewRepresentable {
+public struct SwiftUIWKWebView : NSViewRepresentable {
 	public typealias NSViewType = WKWebView
 	
 	@ObservedObject var viewModel: WebViewModel
@@ -28,9 +28,9 @@ public struct SwiftUIWebView : NSViewRepresentable {
 }
 
 #if DEBUG
-struct SwiftUIWebView_Previews: PreviewProvider {
+struct SwiftUIWKWebView_Previews: PreviewProvider {
 	static var previews: some View {
-		SwiftUIWebView(viewModel: WebViewModel(urlString: "https://twitter.com/jkmazur")!)
+		SwiftUIWKWebView(viewModel: WebViewModel(urlString: "https://twitter.com/jkmazur")!)
 	}
 }
 #endif

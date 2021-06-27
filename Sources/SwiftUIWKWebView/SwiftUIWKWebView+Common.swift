@@ -1,6 +1,6 @@
 //
 //  WKWebView_Common.swift
-//  SwiftUIWebView
+//  SwiftUIWKWebView
 //
 //  Created by Jakub Mazur on 27/06/2021.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import WebKit
 
-extension SwiftUIWebView {
+extension SwiftUIWKWebView {
 	public class Coordinator: NSObject, WKNavigationDelegate {
 		private var viewModel: WebViewModel
 
@@ -21,7 +21,7 @@ extension SwiftUIWebView {
 		}
 	}
 
-	public func makeCoordinator() -> SwiftUIWebView.Coordinator {
+	public func makeCoordinator() -> SwiftUIWKWebView.Coordinator {
 		Coordinator(viewModel)
 	}
 	

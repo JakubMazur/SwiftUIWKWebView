@@ -4,19 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUIWebView",
+    name: "SwiftUIWKWebView",
 	platforms: [
 		.macOS(.v10_15),
 		.iOS(.v13)
 		],
     products: [
         .library(
-            name: "SwiftUIWebView",
-            targets: ["SwiftUIWebView"]),
+            name: "SwiftUIWKWebView",
+            targets: ["SwiftUIWKWebView"]),
     ],
     targets: [
         .target(
-            name: "SwiftUIWebView",
+            name: "SwiftUIWKWebView",
             dependencies: []),
     ]
 )

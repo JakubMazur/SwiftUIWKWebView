@@ -1,6 +1,6 @@
 //
 //  WKWebView_UIKit.swift
-//  SwiftUIWebView
+//  SwiftUIWKWebView
 //
 //  Created by Jakub Mazur on 27/06/2021.
 //
@@ -12,27 +12,27 @@ import WebKit
 
 import UIKit
 
-public struct SwiftUIWebView: UIViewRepresentable {
+public struct SwiftUIWKWebView: UIViewRepresentable {
 	public typealias NSViewType = WKWebView
 	
 	@ObservedObject var viewModel: WebViewModel
 
 	private let webView: WKWebView = WKWebView()
 
-	public func makeUIView(context: UIViewRepresentableContext<SwiftUIWebView>) -> WKWebView {
+	public func makeUIView(context: UIViewRepresentableContext<SwiftUIWKWebView>) -> WKWebView {
 		self.webView.navigationDelegate = context.coordinator
 		self.webView.load(viewModel.request)
 		return self.webView
 	}
 
-	public func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<SwiftUIWebView>) { }
+	public func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<SwiftUIWKWebView>) { }
 }
 
 
 #if DEBUG
-struct SwiftUIWebView_Previews: PreviewProvider {
+struct SwiftUIWKWebView_Previews: PreviewProvider {
 	static var previews: some View {
-		SwiftUIWebView(viewModel: WebViewModel(urlString: "https://twitter.com/jkmazur")!)
+		SwiftUIWKWebView(viewModel: WebViewModel(urlString: "https://twitter.com/jkmazur")!)
 	}
 }
 #endif
