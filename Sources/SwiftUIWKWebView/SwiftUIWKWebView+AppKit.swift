@@ -16,7 +16,7 @@ public struct SwiftUIWKWebView : NSViewRepresentable {
 	
 	@ObservedObject var viewModel: WebViewModel
 	
-	private let webView: WKWebView = WKWebView()
+	public let webView: WKWebView = WKWebView()
 			
 	public func makeNSView(context: Context) -> WKWebView {
 		self.webView.navigationDelegate = context.coordinator
