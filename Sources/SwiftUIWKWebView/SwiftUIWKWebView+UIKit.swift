@@ -16,8 +16,8 @@ public struct SwiftUIWKWebView: UIViewRepresentable {
 	public typealias NSViewType = WKWebView
 	
 	@ObservedObject var viewModel: WebViewModel
-
-	private let webView: WKWebView = WKWebView()
+	
+	let webView: WKWebView = WKWebView()
 
 	public func makeUIView(context: UIViewRepresentableContext<SwiftUIWKWebView>) -> WKWebView {
 		self.webView.navigationDelegate = context.coordinator
